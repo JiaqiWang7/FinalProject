@@ -1,0 +1,249 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100vh;
+   
+    background: white;
+    background-image: linear-gradient(rgba(1, 1, 1, .07) .1em, transparent .1em), linear-gradient(90deg, rgba(1, 1, 1, .07) .1em, transparent .1em);
+    background-size: 1.7vw 1.7vw;
+    
+  }
+
+  .vl {
+    border-left: 1px solid rgb(53, 53, 53);
+    height: 100px;
+    top:0;
+  }
+.menu {
+  flex:auto;
+  padding: 20px;
+  justify-content: space-between;
+  border-right:1px solid rgba(62, 62, 62, 0.9);
+}
+.collect{
+  padding: 20px;
+  border-left:1px solid rgba(62, 62, 62, 0.9);
+}
+.nav {
+  padding: 20px;
+}
+.header {
+  border:1px solid rgba(62, 62, 62, 0.9);
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  font: 300 16px/1.3em Roboto, sans-serif;
+}
+
+.main {
+  align-items: center;
+  text-align: center;
+  background-color: rgb(227, 187, 134);
+  background-size: 8px 8px;
+  /* background-image:radial-gradient(#fff000 10%, transparent 15%); */
+  box-shadow:4px 3px 8px 4px rgba(62, 62, 62, 0.2);
+  
+}
+.action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:20px;
+  justify-content: space-around;
+  padding: 130px;
+
+ 
+}
+
+
+.letter {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 64px;
+}
+
+.track, .elective, .share ,.c, .p, .e{
+  width:250px;
+  height: 250px;
+  text-align:center;
+  line-height: 240px !important;
+  
+}
+
+.c{
+  background-color: #86D0CF;
+  position:relative;
+}
+
+.p{
+  background-color: #E2F16C;
+  position:relative;
+}
+
+.e{
+  background-color: #F29D46;
+  position:relative;
+}
+
+.track {
+  background-color: #DCCEE3;
+  position:relative;
+
+}
+.elective {
+  background-color: #F5BEAB;
+  position: relative;
+}
+.share {
+  background-color: #D4E9E1;
+  position: relative;
+}
+
+
+.greeting {
+  font-size: 64px;
+  text-align: center;
+  padding: 50px;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 6px;
+}
+
+.greeting2 {
+  font-size: 36px;
+  text-align: left;
+  padding: 20px;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 6px;
+}
+#COverview {
+width: auto;
+padding: 30px;
+}
+
+.CPic{
+  width:100%;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-top:30px;
+  width:80%;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-color: rgba(0, 0, 0, .9);
+}
+
+.breadcrumb {
+     background-color: white;
+     padding: 0%;
+     margin: 0%;
+
+}
+
+.form-control {
+  height: 50px;
+  border: 1px solid #000;
+}
+
+.title{
+  font-size: 36px;
+  text-align: left;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 6px;
+  padding:20px;
+}
+
+ .info {
+  font-family: Helvetica;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.course {
+  padding-top:77px;
+  gap:36px;
+
+}
+.card {
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, .13);
+}
+
+.Collect {
+  position: relative;
+  top:10px;
+  left:10px;
+}
+/**
+ * Author: @joostkiens
+ * Licensed under the MIT license
+ */
+
+.curl {
+	width:50px;
+	height:50px;
+  position: absolute;
+  bottom:0px;
+  right:0px;
+	background : 
+		linear-gradient(
+			135deg, 
+			#fff, 
+			#f3f3f3 45%, 
+			#ddd 50%, 
+			#9A6C2C 20%, 
+			#AB7426 30%, 
+			#AD8244 52%,
+			#D8B98D 100%
+		);
+	box-shadow : -3px -3px 10px rgba(0, 0, 0, .25);
+	transition: all .5s ease;
+  transform-origin: bottom right;
+}
+.curl:before,
+.curl:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 12.5%;
+	bottom: 5.8%;
+	width: 70%;
+	max-width: 300px;
+	max-height: 100px;
+	height: 55%;
+	box-shadow: 0 12px 15px rgba(0, 0, 0, .3);
+  transform-origin: bottom right;
+	transform: skew(-10deg) rotate(-6deg);
+}
+.curl:after {
+	left: auto;
+	right: 5.8%;
+	bottom: auto;
+	top: 14.16%;
+	transform: skew(-15deg) rotate(-84deg);
+  transform-origin: bottom right;
+}
+
+.curl:hover {
+	width: 100px;
+	height: 100px;
+}
+.curl:hover:before,
+.curl:hover:after {
+	box-shadow: 0 24px 30px rgba(0, 0, 0, .3);
+  transform-origin: bottom right;
+}
+
+  
+
+  
+  

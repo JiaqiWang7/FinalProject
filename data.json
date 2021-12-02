@@ -1,0 +1,35 @@
+[
+        {
+            "CourseName": "You Are Here: Identity & Place",
+            "CourseNumber": "51-369",
+            "Field":"UI/UX",
+            "Skill":["Typography"],
+            "CountAs":"Design Electives",
+            "Description": "Placemaking is a practice that strengthens the connection between people and the public spaces they share. In this course well explore the identity of spaces, the theories of how we navigate environments, and the ways that designers can define, craft, and/or express the identity of the places we go. This will take the form of projects that ask you to design and prototype permanent and temporary identity systems, custom typography, and full scale physical interventions. ",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+        },
+
+        {
+            "CourseName": "Experimental Form",
+            "CourseNumber": "51-434",
+            "Field":"Industrial Design",
+            "Skill":["HandCrafting"],
+            "CountAs":"Design Electives",
+            "Description": "The Experimental Form Studio looks broadly at the discipline of industrial design with an emphasis on creating new paradigms for interactive objects. ",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+        },
+
+        {
+            "CourseName": "Possibilistic Design",
+            "CourseNumber": "48-734",
+            "Field":"Theory",
+            "Skill":["Coding","Visualizaing"],
+            "CountAs":"Free Electives",
+            "Description": "Possibilistic Design is a projectbased design seminar that concentrates on how critical design theory and powerful storytelling might pave the way for a more responsible, equitable, and exciting future. ",
+            "url": "https://via.placeholder.com/600/92c952",
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+        }
+
+]
