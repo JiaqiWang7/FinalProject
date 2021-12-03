@@ -29,6 +29,7 @@
 //   }
 // }
 
+fetch(relativeDir).then(r => r.text()).then(t =>{var jsonText = t;})
 
 document.getElementById("test").innerHTML = `
 <img src="asset/POverview.jpg" class="card-img-top" alt="...">
