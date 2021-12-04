@@ -1,35 +1,49 @@
 [
         {
             "CourseName": "You Are Here: Identity & Place",
-            "CourseNumber": "51-369",
+            "CourseName": "51-369",
             "Field":"UI/UX",
-            "Skill":["Typography"],
+           "Skill":["Typography","HandCrafting","Visualizaing"],
             "CountAs":"Design Electives",
             "Description": "Placemaking is a practice that strengthens the connection between people and the public spaces they share. In this course well explore the identity of spaces, the theories of how we navigate environments, and the ways that designers can define, craft, and/or express the identity of the places we go. This will take the form of projects that ask you to design and prototype permanent and temporary identity systems, custom typography, and full scale physical interventions. ",
             "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+            "thumbnailUrl": "51-369.jpg"
         },
 
         {
             "CourseName": "Experimental Form",
-            "CourseNumber": "51-434",
+            "CourseName": "51-434",
             "Field":"Industrial Design",
-            "Skill":["HandCrafting"],
+           "Skill":["HandCrafting"],
             "CountAs":"Design Electives",
             "Description": "The Experimental Form Studio looks broadly at the discipline of industrial design with an emphasis on creating new paradigms for interactive objects. ",
-            "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+            "url": "https://cmu.app.box.com/s/irfseewr0osytrp8tgiv2oj1wl3jiz80/folder/122404055456",
+            "image": "51-434.jpg"
         },
 
         {
             "CourseName": "Possibilistic Design",
-            "CourseNumber": "48-734",
+            "CourseName": "48-734",
             "Field":"Theory",
-            "Skill":["Coding","Visualizaing"],
+           "Skill":["Coding","Visualizaing","HandCrafting"],
             "CountAs":"Free Electives",
             "Description": "Possibilistic Design is a projectbased design seminar that concentrates on how critical design theory and powerful storytelling might pave the way for a more responsible, equitable, and exciting future. ",
-            "url": "https://via.placeholder.com/600/92c952",
-            "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+            "url": "https://possibilistic-design-f21.com",
+            "image": "48-734.jpg"
+        },
+
+        {
+            "CourseName": "Introduction to Computing for Creative Practice",
+            "CourseName": "15-104",
+            "Field":"Coding",
+           "Skill":["Coding","Visualizaing"],
+            "CountAs":"Free Electives",
+            "Description": "This course is an introduction to fundamental computing principles and programming techniques for creative cultural practitioners, with special consideration to applications in the visual arts, music, and design. ",
+            "url": "https://courses.ideate.cmu.edu/15-104/f2020/",
+            "image": "15-104.jpg"
         }
+
+
+
 
 ]

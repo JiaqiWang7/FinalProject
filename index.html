@@ -4,8 +4,6 @@
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
   <link rel="track"  type="text/html" href="track.html">
 
   
@@ -13,30 +11,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   
 
     <!--jQuery must also be linked for Bootstrap to function-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
-  <link rel="stylesheet" href="Main.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <script src="type.js" defer></script>
 
 </head>
 <body>
   <!-- header -->
   <div class="container-fluid">
   <div class="row header">
-    <div class="col-sm-1 menu"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <div class="col-sm-1 menu dropdown">
+      <button class="btn btn-outline dropdown-toggle menuBtn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-    </svg></i> </div>
-    <div class="col-sm-10 nav"> This is the navigation bar</div>
-    <div class="col-sm-1 collect"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+    </svg>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="about.html">About</a></li>
+      <li><a class="dropdown-item" href="https://jiaqiw.space/about">The Author</a></li>
+    </ul>
+  </div>
+    <div class="col-sm-10 nav"> Home</div>
+    <div class="col-sm-1 collect"> <a href="collect.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
       <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-    </svg></div>
+    </svg></a></div>
   </div>
   <div class="row greeting">
     <div class="col-sm-1"></div>
@@ -51,73 +62,27 @@
     <div class="col-sm-1 aside-1 ">  </div>
     <div class="col-md-10 action"> 
       <div class="track">
-        <a href="track.html"></a>
-        <h3>Explore Tracks</h3>
-        <div class="curl"></div>
+        <a class="stretched-link" href="track.html"></a>
+        <h3>Explore Tracks</h3>  
+        <img src="asset/explore.png" class="icon" alt="explore track" width="54px" height="54px">
+       <div class="curl"></div>
       </div>
       <div class="elective">
+        <a class="stretched-link" href="electives.html"></a>
         <h3>Find cool electives</h3>
         <div class="curl"></div>
+        <img src="asset/find.png" class="icon" alt="explore track" width="54px" height="54px">
       </div>
       <div class="share">
         <h3>Share your experience</h3>
         <div class="curl"></div>
+        <img src="asset/share.png" class="icon" alt="explore track" width="54px" height="54px">
       </div>
     </div>
     <div class="col-sm-1 aside-2 " > </div>
   </div>
 </div>
-  <!-- <div class="wrapper">
-    <header class="header col-sm-12">Header
-      <nav></nav>
-    </header>
-
-    <article class="main">
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-    </article>
-
-    <aside class="aside aside-1 col-sm-2">Aside 1
-
-    </aside>
-    <aside class="aside aside-2" col-sm-2>Aside 2
-
-    </aside>
-    <footer class="footer">Footer</footer>
-  </div> -->
-
-  <!--This is the container for the grid in Bootstrap-->
-  <div class="container-fluid">
-    <!--Here is a single row with a 4/8 column split in Bootstrap-->
-    
-
-  <br>
-
-
-  <!-- Trigger the modal with a button 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
- 
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
- </div> -->
-
-
+</div>
 
 </body>
 </html>

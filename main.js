@@ -1,84 +1,138 @@
-// let reader = new FileReader();
 
-// reader.onload = (event) => {
-//   let inputFileString = event.target.result;
-//   window.inputFileString = inputFileString;
-//   let data = JSON.parse(inputFileString);
-//   window.data =data;
-//   model.loadDict(data);
-//   model.simulate=false;
-//   model.Model.gravity=true;
-//   model.forceUpdate();
-//   updateGUI();
-// };
-// reader.readAsText(document.getElementById("inputFile").files[0]);
+var button =document.getElementsByClassName("collect-btn");
+var fieldBtn=document.getElementById("field");
+var skillBtn=document.getElementById("skill");
+var searchBtn=document.getElementById("search-btn");
 
-// console.log(getText());
-// var jsonText = getText();
-// var cardArray = JSON.parse(jsonText);
+var collection = localStorage.getItem("collectList");
+if (collection == null) {collection = []}
+else {collection = JSON.parse(collection)};
 
-// let field = "webDesign";
-// for card in cardArray{
-//   if (card['field'] === field) {
-
-//     element = get cards array div
-//     element.appendChild(div)
-//   }
-//   else {
-//     continue;
-//   }
-// }
-
-fetch(relativeDir).then(r => r.text()).then(t =>{var jsonText = t;})
-
-document.getElementById("test").innerHTML = `
-<img src="asset/POverview.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{title}}</h5>
-          <p class="card-text">{{context}}</p>
-        </div>
-`;
-
-
-
-
-
-// Attribute: Geoff Graham :https://www.w3schools.com/howto/howto_js_typewriter.asp
-var aText = new Array(
-    "Hi Designer!", 
-    "What would you like to do here?"
-    );
-    var iSpeed = 100; // time delay of print out
-    var iIndex = 0; // start printing array at this posision
-    var iArrLength = aText[0].length; // the length of the text array
-    var iScrollAt = 20; // start scrolling up at this many lines
-     
-    var iTextPos = 0; // initialise text position
-    var sContents = ''; // initialise contents variable
-    var iRow; // initialise current row
-     
-    function typewriter()
-    {
-     sContents =  ' ';
-     iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("type");
-     
-     while ( iRow < iIndex ) {
-      sContents += aText[iRow++] + '<br />';
-     }
-     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-     if ( iTextPos++ == iArrLength ) {
-      iTextPos = 0;
-      iIndex++;
-      if ( iIndex != aText.length ) {
-       iArrLength = aText[iIndex].length;
-       setTimeout("typewriter()", 400);
-      }
-     } else {
-      setTimeout("typewriter()", iSpeed);
-     }
+const electiveData = [
+      {
+        CourseName: "You Are Here: Identity & Place",
+        CourseNumber: "51-369",
+        Field:"UI/UX",
+        Skill:["Typography","HandCrafting","Visualizaing"],
+        CountAs:"Design Electives",
+        Description: "Explore the identity of spaces, the theories of how we navigate environments, and the ways that designers can define, craft, and/or express the identity of the places we go. Design and prototype permanent and temporary identity systems, custom typography, and full scale physical interventions.         ",
+        url: "https://via.placeholder.com/600/92c952",
+        image: "asset/51-369.jpg"
     }
-    
-    
-    typewriter();
+  ,
+    {
+      CourseName: "Experimental Form",
+      CourseNumber: "51-434",
+      Field:"Industrial Design",
+      Skill:["HandCrafting"],
+      CountAs:"Design Electives",
+      Description: "The Experimental Form Studio looks broadly at the discipline of industrial design. This course encourages an exploratory study of physical objects and artifacts and provides a creative and intellectual forum to re-imagine our relationship with objects. ",
+      url: "https://cmu.app.box.com/s/irfseewr0osytrp8tgiv2oj1wl3jiz80/folder/122404055456",
+      image: "asset/51-434.jpg"
+  },
 
+  {
+      CourseName: "Possibilistic Design",
+      CourseNumber: "48-734",
+      Field:"Theory",
+     Skill:["Coding","Visualizaing","HandCrafting"],
+      CountAs:"Free Electives",
+      Description: "Possibilistic Design is a projectbased design seminar that concentrates on how critical design theory and powerful storytelling might pave the way for a more responsible, equitable, and exciting future. ",
+      url: "https://possibilistic-design-f21.com",
+      image: "asset/48-734.jpg"
+  },
+
+  {
+      CourseName: "Introduction to Computing for Creative Practice",
+      CourseNumber: "15-104",
+      Field:"Coding",
+     Skill:["Coding","Visualizaing"],
+      CountAs:"Free Electives",
+      Description: "This course is an introduction to fundamental computing principles and programming techniques for creative cultural practitioners, with special consideration to applications in the visual arts, music, and design. ",
+      url: "https://courses.ideate.cmu.edu/15-104/f2020/",
+      image: "asset/15-104.jpg"
+  }
+];
+
+function courseTemplate(course){
+  return `
+  <div class="col">
+  <div class="card">
+    <a class="stretched-link card-url" href=${course.url}></a>
+    
+    <img src=${course.image} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><span>${course.CourseNumber}</span>| ${course.CourseName}</h5>
+      <p class="card-text">${course.Description}</div>
+    <button type="button" class="btn btn-dark collect-btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+    </svg> Collect
+  </button>
+  </div>
+</div>
+  `
+}
+
+document.getElementById("test").innerHTML=`
+${electiveData.map(courseTemplate).join("")}
+`
+
+
+
+searchBtn.addEventListener('click', function(){
+  let field; 
+  field=getField();
+  let skill; 
+  skill=getSkill();
+  let countAs;
+  countAs = getCountAs();
+  var newList = [];
+  console.log(countAs);
+  for (i = 0; i<electiveData.length ; i++){
+    course = electiveData[i];
+    if(course.Skill.includes(skill) || skill == "Skill"){
+      if(course.Field == field || field == "Field"){
+        if(course.CountAs == countAs || countAs == "Count As"){
+          newList.push(course);
+        }
+      }
+    }
+  }
+  document.getElementById("test").innerHTML=`
+  ${newList.map(courseTemplate).join("")}`
+})
+
+function getSkill (){
+  var selected=document.getElementById("skill").value;
+  console.log(selected);
+  return selected;
+}
+
+function getField (){
+  var selected=document.getElementById("field").value;
+  return selected;
+}
+
+function getCountAs (){
+  var selected=document.getElementById("countAs").value;
+  return selected;
+}
+
+for(var i=0;i<button.length;i++){
+  let btn=button[i];
+  var collectList = [];
+  btn.addEventListener('click',function getCourseNumbber(event){
+    const parent=event.target.parentNode.getElementsByTagName("span")[0];
+    const courseNumber=parent.innerHTML;
+    for(var j=0;j<4;j++){
+      course = electiveData[j];
+      if(course.CourseNumber == courseNumber){
+        collectList.push(course);
+        console.log(collectList);
+      }
+    }
+    localStorage.setItem("collectList", JSON.stringify( collectList));  
+    console.log(JSON.parse(localStorage.getItem("collectList")))
+  }
+ )
+}
